@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" ng-app="atp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <!-- If you delete this meta tag World War Z will become a reality -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airsoft games</title>
+    <link rel=stylesheet type=text/css
+          href="{{ url_for('static', filename='css/app.css') }}">
+    <link rel=stylesheet type=text/css
+          href="{{ url_for('static', filename='bower_components/angular-loading-bar/build/loading-bar.css') }}">
+</head>
+<body>
+<div class="grid-frame vertical">
+    <div class="grid-content shrink" style="padding: 0;">
+        <ul class="primary condense menu-bar">
+            <li><a><strong>Foundation for Apps</strong></a></li>
+            <li><a href="#" zf-open="playerAddModal"><strong>Add player</strong></a></li>
+        </ul>
+    </div>
+    <div ui-view class="grid-content">
+    </div>
+
+    <div zf-modal="" id="playerAddModal" animation-in="slideInDown" animation-out="hingeOutFromMiddleY">
+        <a zf-close="" class="close-button">×</a>
+
+        <p>Content</p>
+    </div>
+</div>
+
+
+<script src="{{ url_for('static', filename='bower_components/fastclick/lib/fastclick.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/viewport-units-buggyfill/viewport-units-buggyfill.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/tether/tether.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/hammerjs/hammer.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/angular/angular.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/angular-animate/angular-animate.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/angular-ui-router/release/angular-ui-router.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/foundation-apps/js/vendor/iconic.min.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/foundation-apps/js/angular/components/accordion/accordion.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/foundation-apps/js/angular/components/actionsheet/actionsheet.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/foundation-apps/js/angular/components/common/common.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/foundation-apps/js/angular/components/iconic/iconic.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/foundation-apps/js/angular/components/interchange/interchange.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/foundation-apps/js/angular/components/modal/modal.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/foundation-apps/js/angular/components/notification/notification.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/foundation-apps/js/angular/components/offcanvas/offcanvas.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/foundation-apps/js/angular/components/panel/panel.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/foundation-apps/js/angular/components/popup/popup.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/foundation-apps/js/angular/components/tabs/tabs.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/foundation-apps/js/angular/services/foundation.core.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/foundation-apps/js/angular/services/foundation.core.animation.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/foundation-apps/js/angular/services/foundation.dynamicRouting.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/foundation-apps/js/angular/services/foundation.dynamicRouting.animations.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/foundation-apps/js/angular/services/foundation.mediaquery.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/foundation-apps/js/angular/vendor/markdown.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/foundation-apps/js/angular/vendor/svgDirs.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/foundation-apps/js/angular/foundation.js') }}"></script>
+
+{#<script src="{{ url_for('static', filename='js/foundation.js') }}"></script>#}
+<script src="{{ url_for('static', filename='js/templates.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/angular-loading-bar/build/loading-bar.min.js') }}"></script>
+
+
+{# ATP app #}
+<script src="{{ url_for('static', filename='app/atp.js') }}"></script>
+<script src="{{ url_for('static', filename='app/routes.js') }}"></script>
+
+{# ATP players #}
+<script src="{{ url_for('static', filename='app/players/controllers.js') }}"></script>
+
+</body>
+</html>

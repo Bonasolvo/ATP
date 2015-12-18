@@ -1,0 +1,25 @@
+{
+  "name": "ATPapp",
+  "version": "1.1.0",
+  "authors": [
+    "Giyyan"
+  ],
+  "description": "Airsoft",
+  "main": "app/atp.js",
+  "keywords": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-apps": "~1.1.0",
+    "angular-modal-service": "~0.6.6",
+    "angular-loading-bar": "~0.8.0"
+  }
+}
